@@ -1,0 +1,15 @@
+{
+    "name": "tikagroup/MaseuropaGeneralServices",
+    "description": "Php classes for Maseuropa General Services Web Service.",
+    "require": {
+        "php": ">=5.3.3",
+        "ext-soap": "*",
+        "ext-mbstring": "*",
+        "wsdltophp/packagebase": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maseuropa\\GeneralServices\\": "./src\\"
+        }
+    }
+}

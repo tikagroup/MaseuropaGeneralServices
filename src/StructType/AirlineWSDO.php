@@ -1,0 +1,136 @@
+<?php
+
+namespace Maseuropa\GeneralServices\StructType;
+
+use \WsdlToPhp\PackageBase\AbstractStructBase;
+
+/**
+ * This class stands for AirlineWSDO StructType
+ * @subpackage Structs
+ */
+class AirlineWSDO extends AbstractStructBase
+{
+    /**
+     * The id
+     * Meta information extracted from the WSDL
+     * - nillable: true
+     * @var int
+     */
+    public $id;
+    /**
+     * The iata_code
+     * Meta information extracted from the WSDL
+     * - nillable: true
+     * @var string
+     */
+    public $iata_code;
+    /**
+     * The name
+     * Meta information extracted from the WSDL
+     * - nillable: true
+     * @var string
+     */
+    public $name;
+    /**
+     * Constructor method for AirlineWSDO
+     * @uses AirlineWSDO::setId()
+     * @uses AirlineWSDO::setIata_code()
+     * @uses AirlineWSDO::setName()
+     * @param int $id
+     * @param string $iata_code
+     * @param string $name
+     */
+    public function __construct($id = null, $iata_code = null, $name = null)
+    {
+        $this
+            ->setId($id)
+            ->setIata_code($iata_code)
+            ->setName($name);
+    }
+    /**
+     * Get id value
+     * @return int|null
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
+     * Set id value
+     * @param int $id
+     * @return \Maseuropa\GeneralServices\StructType\AirlineWSDO
+     */
+    public function setId($id = null)
+    {
+        // validation for constraint: int
+        if (!is_null($id) && !(is_int($id) || ctype_digit($id))) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($id, true), gettype($id)), __LINE__);
+        }
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Get iata_code value
+     * @return string|null
+     */
+    public function getIata_code()
+    {
+        return $this->iata_code;
+    }
+    /**
+     * Set iata_code value
+     * @param string $iata_code
+     * @return \Maseuropa\GeneralServices\StructType\AirlineWSDO
+     */
+    public function setIata_code($iata_code = null)
+    {
+        // validation for constraint: string
+        if (!is_null($iata_code) && !is_string($iata_code)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($iata_code, true), gettype($iata_code)), __LINE__);
+        }
+        $this->iata_code = $iata_code;
+        return $this;
+    }
+    /**
+     * Get name value
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    /**
+     * Set name value
+     * @param string $name
+     * @return \Maseuropa\GeneralServices\StructType\AirlineWSDO
+     */
+    public function setName($name = null)
+    {
+        // validation for constraint: string
+        if (!is_null($name) && !is_string($name)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($name, true), gettype($name)), __LINE__);
+        }
+        $this->name = $name;
+        return $this;
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see AbstractStructBase::__set_state()
+     * @uses AbstractStructBase::__set_state()
+     * @param array $array the exported values
+     * @return \Maseuropa\GeneralServices\StructType\AirlineWSDO
+     */
+    public static function __set_state(array $array)
+    {
+        return parent::__set_state($array);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}
