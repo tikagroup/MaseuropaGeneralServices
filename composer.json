@@ -1,5 +1,5 @@
 {
-    "name": "tikagroup/MaseuropaGeneralServices",
+    "name": "tikagroup/maseuropa-general-services",
     "description": "Php classes for Maseuropa General Services Web Service.",
     "require": {
         "php": ">=5.3.3",
